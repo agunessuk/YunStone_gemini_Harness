@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+.gemini/settings.local.json
+
+# 개인 작업 기록 (하네스 작동에 필요 없음, 로컬에만 보관)
+수집/
+분석/

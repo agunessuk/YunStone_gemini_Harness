@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "_설명": "아트 기준 (mob-modeling 2층 구조). 이 파일을 프로젝트에 두고 고친다: 루트의 art_standard.json 또는 modeling/art_standard.json. 1층 common 은 비워 두면 스킬 기본값(references/common-rules.md). 2층 profiles 는 make_profile.py 로 기준 몹에서 만든다(references/style-profiles.md).",
+  "common": {
+    "_설명": "바꿀 값만 적는다. 예: 32x 텍스처 서버면 \"base_px_per_block\": 32, 보스 렌더 뼈 예산을 늘리려면 \"render_bones\": {\"보스\": 60}"
+  },
+  "profiles": {},
+  "default_profile": null,
+  "assign": {
+    "_설명": "모델 ID → {\"profile\": 프로필, \"role\": 일반|정예|보스|소환, \"theme\": 테마}. make_profile.py --assign 으로 채운다"
+  },
+  "exceptions": {
+    "_설명": "모델 ID → {규칙 키: 이유·승인자·날짜}. 예: \"giant_boss\": {\"px_per_block\": \"레이드 보스, 사용자 승인 2026-11-14\"}"
+  },
+  "paths": {
+    "_설명": "work: 결과·설계·미리보기 폴더, models: 모델 ID 로 .bbmodel 을 찾을 폴더 목록",
+    "work": "modeling",
+    "models": []
+  }
+}
