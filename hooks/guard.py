@@ -99,10 +99,10 @@ def find_root(start):
     cur = os.path.abspath(start)
     home = norm(HOME)
     while True:
-        claude_dir = os.path.join(cur, ".gemini")
+        gemini_dir = os.path.join(cur, ".gemini")
         if norm(cur) != home and (
-            os.path.isfile(os.path.join(claude_dir, "protected.txt"))
-            or os.path.isfile(os.path.join(claude_dir, "READONLY"))
+            os.path.isfile(os.path.join(gemini_dir, "protected.txt"))
+            or os.path.isfile(os.path.join(gemini_dir, "READONLY"))
         ):
             return cur
         parent = os.path.dirname(cur)

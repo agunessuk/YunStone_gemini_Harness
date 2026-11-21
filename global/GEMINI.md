@@ -21,3 +21,8 @@
 
 ## 정리
 - 작업이 끝나면 내가 띄운 서버·백그라운드 작업·임시 파일을 정리한다. 내가 띄우지 않은 것은 끄지 않는다(`env-and-cleanup` 스킬).
+
+## Gemini CLI 환경
+- `BeforeTool` 훅이 보호 경로 수정이나 위험 명령(`rm -r`, `git reset --hard` 등)을 차단하면 우회하지 말고 이유를 설명한 뒤 사용자 확인(또는 `.gemini/approvals.json` 승인 등록)을 받는다.
+- 이미지(PNG)·PDF·문서 레이아웃 검수는 `read_file`로 직접 열어 확인한다.
+- 전역 지침·스킬·훅 상태는 Gemini CLI에서 `/memory show`, `/skills list`, `/hooks panel`로 확인할 수 있다.
